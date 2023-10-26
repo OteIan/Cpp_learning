@@ -24,4 +24,6 @@ int main() {
             cout << "      ";
         cout << p * 10 << endl;
     }
+
+    return 0;
 }

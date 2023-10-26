@@ -26,7 +26,6 @@ int main() {
             cout << '*';
         }
 
-        // Print a new line
         cout << endl;
     }
     

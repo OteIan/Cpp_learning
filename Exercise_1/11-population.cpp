@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    long long pop = 312032486;
+    long long pop = 312032486.0;
     long long t = 365.0 * 24.0 * 3600.0;
 
     long long births = t / 7.0;
