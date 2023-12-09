@@ -4,7 +4,6 @@
 
 using namespace std;
 
-// Function to normalize the string
 string normalize(const string& s) {
     string result;
     for (char c : s) { 
@@ -15,7 +14,6 @@ string normalize(const string& s) {
     return result;
 }
 
-// Function to check if a string is a palindrome
 bool isPalindrome_recursive(const string& str, int left, int right) {
     if (left >= right) {
         return true;
@@ -24,21 +22,16 @@ bool isPalindrome_recursive(const string& str, int left, int right) {
     if (str[left] != str[right]) {
         return false; // Characters differ, not a palindrome
     }
-
-    left++; // Move left pointer rightward
-    right--; // Move right pointer leftward
-    return isPalindrome_recursive(str, left, right);
+    return isPalindrome_recursive(str, left + 1, right + 1);
 }
 
-// Main function
 int main() {
     string input;
     cout << "Enter a string: ";
     getline(cin, input); // Read input string
 
     string str = normalize(input); // Normalize the input string
-    int left = 0; // Starting index
-    int right = str.length() - 1; // Ending index
+    int left = 0, right = str.length() - 1; // Ending index
 
     if (isPalindrome_recursive(str, left, right)) {
         cout << "\"" << input << "\" is a palindrome." << endl;
