@@ -1,99 +1,87 @@
 // Stack.cpp : This file contains the 'main' function. Program execution  begins and ends there.
 #include <iostream>
 #include <string>
+
 using namespace std;
-class Stack
-{
+
+class Stack {
 private:
     int top;
     int arr[5];
 
 public:
-    Stack()
-    {
+    Stack() {
         top = -1;
-        for (int i = 0; i < 5; i++)
-        {
+        for (int i = 0; i < 5; i++) {
             arr[i] = 0;
         }
     }
-    bool isEmpty()
-    {
+
+    bool isEmpty() {
         if (top == -1)
             return true;
         else
             return false;
     }
-    bool isFull()
-    {
+
+    bool isFull() {
         if (top == 4)
             return true;
         else
             return false;
     }
-    void push(int val)
-    {
-        if (isFull())
-        {
+
+    void push(int val) {
+        if (isFull()) {
             cout << "stack overflow" << endl;
-        }
-        else
-        {
+        } else {
             top++; // 1
             arr[top] = val;
         }
     }
-    int pop()
-    {
-        if (isEmpty())
-        {
+
+    int pop() {
+        if (isEmpty()) {
             cout << "stack underflow" << endl;
             return 0;
-        }
-        else
-        {
+        } else {
             int popValue = arr[top];
             arr[top] = 0;
             top--;
             return popValue;
         }
     }
-    int count()
-    {
+
+    int count() {
         return (top + 1);
     }
-    int peek(int pos)
-    {
-        if (isEmpty())
-        {
+    
+    int peek(int pos) {
+        if (isEmpty()) {
             cout << "stack underflow" << endl;
             return 0;
-        }
-        else
-        {
+        } else {
             return arr[pos];
         }
     }
-    void change(int pos, int val)
-    {
+
+    void change(int pos, int val) {
         arr[pos] = val;
         cout << "value changed at location " << pos << endl;
     }
-    void display()
-    {
+
+    void display() {
         cout << "All values in the Stack are " << endl;
-        for (int i = 4; i >= 0; i--)
-        {
+        for (int i = 4; i >= 0; i--) {
             cout << arr[i] << endl;
         }
     }
 };
-int main()
-{
+
+int main() {
     Stack s1;
     int option, position, value;
-    do
-    {
+    do {
         cout << "What operation do you want to perform? Select Option number. Enter 0 to exit." << endl;
         cout << "1. Push()" << endl;
         cout << "2. Pop()" << endl;
@@ -103,11 +91,10 @@ int main()
         cout << "6. count()" << endl;
         cout << "7. change()" << endl;
         cout << "8. display()" << endl;
-        cout << "9. Clear Screen" << endl
-             << endl;
+        cout << "9. Clear Screen" << endl << endl;
         cin >> option;
-        switch (option)
-        {
+
+        switch (option) {
         case 0:
             break;
         case 1:
@@ -158,5 +145,6 @@ int main()
             cout << "Enter Proper Option number " << endl;
         }
     } while (option != 0);
+    
     return 0;
 }
