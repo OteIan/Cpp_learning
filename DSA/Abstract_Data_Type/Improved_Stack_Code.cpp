@@ -4,101 +4,84 @@
 #include <iostream>
 #include <string>
 #include <limits> // For std::numeric_limits
+
 using namespace std;
-class Stack
-{
+
+class Stack {
 private:
     static const int size = 5;
     int top;
     int arr[size];
 
 public:
-    Stack()
-    {
+    Stack() {
         top = -1;
-        for (int i = 0; i < size; i++)
-        {
+        for (int i = 0; i < size; i++) {
             arr[i] = 0;
         }
     }
-    bool isEmpty()
-    {
+
+    bool isEmpty() {
         return top == -1;
     }
-    bool isFull()
-    {
+
+    bool isFull() {
         return top == size - 1;
     }
-    void push(int val)
-    {
-        if (isFull())
-        {
+
+    void push(int val) {
+        if (isFull()) {
             cout << "Stack overflow" << endl;
-        }
-        else
-        {
+        } else {
             top++;
             arr[top] = val;
         }
     }
-    int pop()
-    {
-        if (isEmpty())
-        {
+
+    int pop() {
+        if (isEmpty()) {
             cout << "Stack underflow" << endl;
             return 0;
-        }
-        else
-        {
+        } else {
             int popValue = arr[top];
             arr[top] = 0;
             top--;
             return popValue;
         }
     }
-    int count()
-    {
+
+    int count() {
         return top + 1;
     }
-    int peek(int pos)
-    {
-        if (pos < 0 || pos >= size)
-        {
+
+    int peek(int pos) {
+        if (pos < 0 || pos >= size) {
             cout << "Position out of bounds" << endl;
             return 0;
-        }
-        else if (isEmpty())
-        {
+        } else if (isEmpty()) {
             cout << "Stack underflow" << endl;
             return 0;
-        }
-        else
-        {
+        } else {
             return arr[pos];
         }
     }
-    void change(int pos, int val)
-    {
-        if (pos < 0 || pos >= size)
-        {
+
+    void change(int pos, int val) {
+        if (pos < 0 || pos >= size) {
             cout << "Position out of bounds" << endl;
-        }
-        else
-        {
+        } else {
             arr[pos] = val;
             cout << "Value changed at location " << pos << endl;
         }
     }
-    void display()
-    {
+
+    void display() {
         cout << "All values in the Stack are: " << endl;
-        for (int i = top; i >= 0; i--)
-        {
+        for (int i = top; i >= 0; i--) {
             cout << arr[i] << endl;
         }
     }
-    static void clearScreen()
-    {
+    static void clearScreen() {
 #ifdef _WIN32
         system("cls");
 #else
@@ -106,12 +89,12 @@ public:
 #endif
     }
 };
-int main()
-{
+
+int main() {
     Stack s1;
     int option, position, value;
-    do
-    {
+
+    do {
         cout << "What operation do you want to perform? Select Option number.Enter 0 to exit." << endl;
         cout << "1. Push()" << endl;
         cout << "2. Pop()" << endl;
@@ -122,20 +105,19 @@ int main()
         cout << "7. change()" << endl;
         cout << "8. display()" << endl;
         cout << "9. Clear Screen" << endl << endl;
-        while (!(cin >> option))
-        {
+
+        while (!(cin >> option)) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Please enter a valid number" << endl;
         }
-        switch (option)
-        {
+
+        switch (option) {
         case 0:
             break;
         case 1:
             cout << "Enter an item to push in the stack" << endl;
-            while (!(cin >> value))
-            {
+            while (!(cin >> value)) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cout << "Please enter a valid number" << endl;
@@ -159,8 +141,7 @@ int main()
             break;
         case 5:
             cout << "Enter position of item you want to peek: " << endl;
-            while (!(cin >> position))
-            {
+            while (!(cin >> position)) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cout << "Please enter a valid position" << endl;
@@ -173,15 +154,13 @@ int main()
         case 7:
             cout << "Change Function Called - " << endl;
             cout << "Enter position of item you want to change : ";
-            while (!(cin >> position))
-            {
+            while (!(cin >> position)) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cout << "Please enter a valid position" << endl;
             }
             cout << "Enter value of item you want to change : ";
-            while (!(cin >> value))
-            {
+            while (!(cin >> value)) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cout << "Please enter a valid number" << endl;
