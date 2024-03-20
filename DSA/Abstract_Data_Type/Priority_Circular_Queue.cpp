@@ -38,20 +38,14 @@ public:
             arr[rear] = val;
         } else {
             int i = rear;
-            while (i != front && val > arr[i]) {
-                i = (i - 1 + 5) % 5;
+            while (i >= front && val > arr[i]) {
+                arr[(i + 1) % 5] = arr[i];
+                i = (i - 1) % 5;
             }
 
-            rear = (rear + 1) % 5;
-
-            int j = rear;
-            while (j != (i + 1) % 5) {
-                arr[j] = arr[(j - 1 + 5) % 5];
-                j = (j - 1 + 5) % 5;
-            }
             arr[(i + 1) % 5] = val;
+            rear = (rear + 1) % 5;
         }
-
         itemCount++;
     }
 
@@ -85,6 +79,7 @@ public:
         for (int i = 0; i < 5; i++) {
             cout << arr[i] << " ";
         }
+        cout << endl;
     }
 };
 

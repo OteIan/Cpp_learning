@@ -1,5 +1,5 @@
 // Priority_Queue.cpp : This file contains the 'main' function. Program execution begins and ends there.
-// This uses a linear queue.
+// This uses a simple queue.
 #include <iostream>
 using namespace std;
 
@@ -77,6 +77,7 @@ public:
         for (int i = 0; i < 5; i++) {
             cout << arr[i] << " ";
         }
+        cout << endl;
     }
 };
 
