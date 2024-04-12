@@ -58,6 +58,12 @@ public:
         else if (checkIfNodeExist(n)) {
             cout << "Node already exist with this RegNo value.\n" << "Enter different RegNo value" << endl << endl;
         }
+        else if (n->RegNo < top->RegNo) {
+            n->next = top;
+            top = n;
+
+            cout << "Node PUSHED successfully\n" << endl;
+        }
         else {
             Node *temp = top;
             while (temp->next != NULL && temp->next->RegNo < n->RegNo) {
@@ -65,6 +71,10 @@ public:
             }
             n->next = temp->next;
             temp->next = n;
+            if (temp->next == NULL) {
+                top = n;
+            }
+
             cout << "Node PUSHED successfully\n" << endl;
         }
     }
