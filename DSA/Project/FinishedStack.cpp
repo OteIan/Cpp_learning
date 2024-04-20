@@ -84,7 +84,7 @@ public:
 };
 
 string print_node(Node *temp) {
-    return "[" + temp->RegNo + "," + temp->name + "," + std::to_string(temp->age) + "," + temp->gender + "," +  "Grade: " + temp->grade + "," + std::to_string(temp->aggregate) + "/1100" + ", Grades => (" + std::to_string(temp->AppliedMaths1A) + "," + std::to_string(temp->AppliedMaths1B) + "," + std::to_string(temp->ComputerScience) + "," + std::to_string(temp->DSA) + "," + std::to_string(temp->ECT) + "," + std::to_string(temp->Physics1A) + "," + std::to_string(temp->Physics1B) + "," + std::to_string(temp->PureMaths1A) + "," + std::to_string(temp->PureMaths1B) + "," + std::to_string(temp->WorkshopTechnology1) + "," + std::to_string(temp->WorkshopTechnology2) + ")" + "]";
+    return "[" + temp->RegNo + "," + temp->name + "," + to_string(temp->age) + "," + temp->gender + "," +  "Grade: " + temp->grade + "," + to_string(temp->aggregate) + "/1100" + ", Grades => (" + to_string(temp->AppliedMaths1A) + "," + to_string(temp->AppliedMaths1B) + "," + to_string(temp->ComputerScience) + "," + to_string(temp->DSA) + "," + to_string(temp->ECT) + "," + to_string(temp->Physics1A) + "," + to_string(temp->Physics1B) + "," + to_string(temp->PureMaths1A) + "," + to_string(temp->PureMaths1B) + "," + to_string(temp->WorkshopTechnology1) + "," + to_string(temp->WorkshopTechnology2) + ")" + "]";
 }
 
 class Stack {
@@ -114,6 +114,7 @@ public:
     }
 
     void push(Node *n) {
+        // Make changes here => aggregate and total grade calculated here
         if (top == NULL) {
             top = n;
             cout << "Node PUSHED successfully\n" << endl;
@@ -149,6 +150,7 @@ public:
             return temp;
         }
         else {
+            // Make changes here
             temp = top;
             top = top->next;
             return temp;
@@ -162,6 +164,7 @@ public:
             return NULL;
         }
         else {
+            // Make changes here
             return top;
         }
     }
