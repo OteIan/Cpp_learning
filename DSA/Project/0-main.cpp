@@ -71,25 +71,25 @@ int main() {
     s1.push(new Node("FEE3/2989/2023", "Mark Bunyali", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
 
 
-    // s1.push(new Node("F17/2250/2021", "Danson Mwakio", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("F17/144557/2022", "Wilfred Maina", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("F17/2058/2020", "Raynold Wanjala", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/146266/2023", "Angelou Mafabi", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/146225/2023", "Ayuong Ayuel", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/147364/2023", "Rodney Nsereko", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/146408/2023", "Melissa Kinda", 20, "F", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/146715/2023", "Egan Mureithi", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/145838/2023", "Ian Gitonga", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/146850/2023", "Joshua Luchiri", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/145862/2023", "Marvin Bahuya", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/145849/2023", "Emmanuel Gisairo", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/147067/2023", "Gregory Koech", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/145919/2023", "Brian Mutai", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/147166/2023", "Issak Yassir", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/145981/2023", "Laviticus Magu", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/147181/2023", "Mitch Tindivale", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/146124/2023", "Ismael Namatsi", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    // s1.push(new Node("FEE3/147243/2023", "Alvin Muita", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("F17/2250/2021", "Danson Mwakio", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("F17/144557/2022", "Wilfred Maina", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("F17/2058/2020", "Raynold Wanjala", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/146266/2023", "Angelou Mafabi", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/146225/2023", "Ayuong Ayuel", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/147364/2023", "Rodney Nsereko", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/146408/2023", "Melissa Kinda", 20, "F", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/145862/2023", "Marvin Bahuya", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/145849/2023", "Emmanuel Gisairo", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/145838/2023", "Ian Gitonga", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/147067/2023", "Gregory Koech", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/146850/2023", "Joshua Luchiri", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/147181/2023", "Mitch Tindivale", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/146124/2023", "Ismael Namatsi", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/145919/2023", "Brian Mutai", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/147166/2023", "Issak Yassir", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/145981/2023", "Laviticus Magu", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/146715/2023", "Egan Mureithi", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/147243/2023", "Alvin Muita", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
 
 
     s1.display();
