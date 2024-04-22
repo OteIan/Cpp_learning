@@ -89,6 +89,8 @@ string print_node(Node *temp) {
 
 class Stack {
 // TO-DO: Order BY: Age, Grade, Aggregate, Each Unit Grade
+private:
+    int nb_students = 0;
 public:
     Node *top;
 
@@ -101,6 +103,7 @@ public:
     }
 
     bool checkIfNodeExist(Node *n) {
+        // Change to binary search
         Node *temp = top;
         bool exist = false;
 
@@ -119,6 +122,7 @@ public:
         if (top == NULL) {
             top = n;
             cout << "Node PUSHED successfully\n" << endl;
+            nb_students++;
         }
         else if (checkIfNodeExist(n)) {
             cout << "Node already exist with this RegNo value.\n" << "Enter different RegNo value" << endl << endl;
@@ -128,6 +132,7 @@ public:
             top = n;
 
             cout << "Node PUSHED successfully\n" << endl;
+            nb_students++;
         }
         else {
             Node *temp = top;
@@ -141,6 +146,7 @@ public:
             }
 
             cout << "Node PUSHED successfully\n" << endl;
+            nb_students++;
         }
     }
 
@@ -154,6 +160,7 @@ public:
             // Make changes here
             temp = top;
             top = top->next;
+            nb_students--;
             return temp;
         }
     }
@@ -171,13 +178,7 @@ public:
     }
 
     int count() {
-        int count = 0;
-        Node *temp = top;
-        while (temp != NULL) {
-            count++;
-            temp = temp->next;
-        }
-        return count;
+        return nb_students;
     }
 
     void display() {
