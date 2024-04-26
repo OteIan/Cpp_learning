@@ -198,4 +198,21 @@ public:
         cout << endl;
     }
 
+    void display_by_unit(int option_unit) {
+        switch (option_unit) {
+        case 1:
+            break;
+        
+        default:
+            cout << "Enter Proper Unit " << endl << endl;
+            break;
+        }
+    }
+
+    void destroy_stack() {
+        while (!isEmpty()) {
+            delete pop();
+        }
+    }
+
 };

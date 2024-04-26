@@ -8,18 +8,18 @@ int main() {
     Stack s1;
     
     // [RegNo., Name, Age, Gender, Units(Applied Maths 1A, Applied Maths 1B, Computer Science, DSA, ECT, Physics 1A, Physics 1B, Pure Maths 1A, Pure Maths 1B, Workshop Technology 1, Workshop Technology 2)]
-    s1.push(new Node("FEE3/2144/2023", "Ian Ote", 19, "Male", 91, 89, 90, 88, 90, 90, 89, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2124/2023", "Waititu John", 19, "M", 91, 89, 90, 88, 90, 90, 89, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2137/2023", "Lyn Njeri", 20, "Female", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2149/2023", "Daniel Bitengo", 20, "Male", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2161/2023", "Mitchelle Wanja", 20, "F", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2240/2023", "Chege Gathuru", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2254/2023", "Douglas Ouma", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/6985/2023", "Geoffrey John", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2160/2023", "Nicole Gitonga", 20, "F", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2239/2023", "Franky Machani", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/2253/2023", "Lewis Majur", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
-    s1.push(new Node("FEE3/4468/2023", "Joseph Junior", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
+    s1.push(new Node("FEE3/2144/2023", "Ian Ote", 19, "Male", 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100));
+    s1.push(new Node("FEE3/2124/2023", "Waititu John", 19, "M", 78, 92, 85, 88, 90, 76, 89, 82, 91, 87, 88));
+    s1.push(new Node("FEE3/2137/2023", "Lyn Njeri", 20, "Female", 85, 90, 88, 92, 90, 87, 90, 88, 90, 89, 90));
+    s1.push(new Node("FEE3/2149/2023", "Daniel Bitengo", 20, "Male", 85, 95, 90, 88, 92, 90, 87, 90, 88, 90, 89));
+    s1.push(new Node("FEE3/2161/2023", "Mitchelle Wanja", 20, "F", 85, 95, 88, 92, 90, 87, 90, 88, 90, 89, 90));
+    s1.push(new Node("FEE3/2240/2023", "Chege Gathuru", 20, "M", 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90));
+    s1.push(new Node("FEE3/2254/2023", "Douglas Ouma", 20, "M", 85, 90, 95, 88, 92, 87, 96, 89, 93, 90, 91));
+    s1.push(new Node("FEE3/6985/2023", "Geoffrey John", 20, "M", 85, 90, 40, 88, 92, 87, 60, 89, 70, 90, 80));
+    s1.push(new Node("FEE3/2160/2023", "Nicole Gitonga", 20, "F", 85, 95, 90, 88, 92, 87, 96, 89, 93, 90, 91));
+    s1.push(new Node("FEE3/2239/2023", "Franky Machani", 20, "M", 85, 80, 75, 70, 65, 60, 55, 50, 45, 40, 90));
+    s1.push(new Node("FEE3/2253/2023", "Lewis Majur", 20, "M", 85, 75, 80, 90, 70, 60, 50, 40, 55, 65, 90));
+    s1.push(new Node("FEE3/4468/2023", "Joseph Junior", 20, "M", 75, 88, 92, 67, 90, 82, 90, 78, 85, 95, 80));
     s1.push(new Node("FEE3/2126/2023", "Allan Githui", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
     s1.push(new Node("FEE3/2134/2023", "Albert Kipkorir", 20, "M", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
     s1.push(new Node("FEE3/2139/2023", "Hamida Aziz", 20, "F", 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90));
