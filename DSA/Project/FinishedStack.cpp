@@ -1,11 +1,5 @@
 #include <iostream>
-#include <chrono>
-#include <thread>
 using namespace std;
-
-void sleep(int seconds) {
-    this_thread::sleep_for(chrono::seconds(seconds));
-}
 
 string grade_calculator(int mean_grade) {
     string grade;
