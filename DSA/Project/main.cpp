@@ -14,9 +14,8 @@ int main() {
         cout << "4. peek()" << endl;
         cout << "5. count()" << endl;
         cout << "6. display()" << endl;
-        cout << "7. Display by Unit" << endl;
-        cout << "8. Display by Mean grade" << endl;
-        cout << "9. Clear Screen" << endl << endl;
+        cout << "7. Display by Student's attribute" << endl;
+        cout << "8. Clear Screen" << endl << endl;
         cin >> option;
         // Node n1 = new Node();
         Node *new_node = new Node();
@@ -98,21 +97,24 @@ int main() {
             cout << endl;
             break;
         case 7:
-            cout << "Display by Unit Function Called - " << endl;
-            cout << "Choose the unit to sort the students by: " << endl;
-            cout << "1. Applied Maths 1A" << endl;
-            cout << "2. Applied Maths 1B" << endl;
-            cout << "3. Computer Science" << endl;
-            cout << "4. DSA" << endl;
-            cout << "5. ECT" << endl;
-            cout << "6. Physics 1A" << endl;
-            cout << "7. Physics 1B" << endl;
-            cout << "8. Pure Maths 1A" << endl;
-            cout << "9. Pure Maths 1B" << endl;
-            cout << "10. Workshop Technology 1" << endl;
-            cout << "11. Workshop Technology 2" << endl;
+            cout << "Display by Attribute Function Called - " << endl;
+            cout << "Choose the attribute to sort the students by: " << endl;
+            cout << "0. Age" << endl;
+            cout << "1. Mean Grade" << endl;
+            cout << "2. Applied Maths 1A" << endl;
+            cout << "3. Applied Maths 1B" << endl;
+            cout << "4. Computer Science" << endl;
+            cout << "5. DSA" << endl;
+            cout << "6. ECT" << endl;
+            cout << "7. Physics 1A" << endl;
+            cout << "8. Physics 1B" << endl;
+            cout << "9. Pure Maths 1A" << endl;
+            cout << "10. Pure Maths 1B" << endl;
+            cout << "11. Workshop Technology 1" << endl;
+            cout << "12. Workshop Technology 2" << endl;
+
             cin >> unit;
-            s1.display_by_unit(unit);
+            s1.displayByAttribute(unit);
             cout << endl;
             break;
         case 9:
