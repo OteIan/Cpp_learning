@@ -133,6 +133,29 @@ private:
     Node *WT_1_top = NULL;
     Node *WT_2_top = NULL;
 
+    void display_student(Node *n) {
+        cout << "Details of the student are:\n" << endl;
+        cout << "RegNo: " << n->RegNo << endl;
+        cout << "Name: " << n->name << endl;
+        cout << "Age: " << n->age << endl;
+        cout << "Gender: " << n->gender << endl << endl;
+
+        cout << "Applied Maths 1A: " << grade_calculator(n->AppliedMaths1A) << endl;
+        cout << "Applied Maths 1B: " << grade_calculator(n->AppliedMaths1B) << endl;
+        cout << "Computer Science: " << grade_calculator(n->ComputerScience) << endl;
+        cout << "Data Structures and Algorithms: " << grade_calculator(n->DSA) << endl;
+        cout << "Electrical Circuit Theory: " << grade_calculator(n->ECT) << endl;
+        cout << "Physics 1A: " << grade_calculator(n->Physics1A) << endl;
+        cout << "Physics 1B: " << grade_calculator(n->Physics1B) << endl;
+        cout << "Pure Maths 1A: " << grade_calculator(n->PureMaths1A) << endl;
+        cout << "Pure Maths 1B: " << grade_calculator(n->PureMaths1B) << endl;
+        cout << "Workshop Technology I: " << grade_calculator(n->WorkshopTechnology1) << endl;
+        cout << "Workshop Technology II: " << grade_calculator(n->WorkshopTechnology2) << endl << endl;
+
+        cout << "Aggregate: " << n->aggregate << endl;
+        cout << "Mean Grade: " << n->grade << endl << endl;
+    }
+
     void pushByAge(Node *n) {
         if (age_top == NULL) {
             age_top = n;
@@ -711,15 +734,27 @@ public:
         }
     }
 
-    Node *peek() {
+    void peek(int pos = 0) {
         // Node *temp = NULL;
         if (isEmpty()) {
             cout << "stack underflow\n" << endl;
-            return NULL;
+        }
+        else if (pos == 0) {
+            cout << "Top of the stack is:\n";
+            display_student(top);
+            cout << endl;
         }
         else {
-            // Make changes here
-            return top;
+            Node *temp = top;
+            if (pos > nb_students) {
+                cout << "Invalid position\n" << endl;
+            }
+            else {    
+                for (int i = 1; i <= pos; i++) {
+                    temp = temp->next;
+                }
+                display_student(temp);
+            }
         }
     }
 
