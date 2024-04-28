@@ -35,25 +35,25 @@ int main() {
 
             cout << "------STUDENT'S GRADES------\nEnter AppliedMaths1A marks of student: ";
             cin >> new_node->AppliedMaths1A;
-            cout << "Enter AppliedMaths1B marks of student: ";
+            cout << "Enter Applied Maths 1B marks of student: ";
             cin >> new_node->AppliedMaths1B;
-            cout << "Enter ComputerScience marks of student: ";
+            cout << "Enter Computer Science marks of student: ";
             cin >> new_node->ComputerScience;
-            cout << "Enter DSA marks of student: ";
+            cout << "Enter Data Structures & Algorithms marks of student: ";
             cin >> new_node->DSA;
-            cout << "Enter ECT marks of student: ";
+            cout << "Enter Electrical Circuit Theory marks of student: ";
             cin >> new_node->ECT;
-            cout << "Enter Physics1A marks of student: ";
+            cout << "Enter Physics 1A marks of student: ";
             cin >> new_node->Physics1A;
-            cout << "Enter Physics1B marks of student: ";
+            cout << "Enter Physics 1B marks of student: ";
             cin >> new_node->Physics1B;
             cout << "Enter PureMaths1A marks of student: ";
             cin >> new_node->PureMaths1A;
-            cout << "Enter PureMaths1B marks of student: ";
+            cout << "Enter Pure Maths 1B marks of student: ";
             cin >> new_node->PureMaths1B;
-            cout << "Enter WorkshopTechnology1 marks of student: ";
+            cout << "Enter Workshop Technology 1 marks of student: ";
             cin >> new_node->WorkshopTechnology1;
-            cout << "Enter WorkshopTechnology2 marks of student: ";
+            cout << "Enter Workshop Technology 2 marks of student: ";
             cin >> new_node->WorkshopTechnology2;
 
             new_node->aggregate = (new_node->AppliedMaths1A + new_node->AppliedMaths1B + new_node->ComputerScience + new_node->DSA + new_node->ECT + new_node->Physics1A + new_node->Physics1B + new_node->PureMaths1A + new_node->PureMaths1B + new_node->WorkshopTechnology1 + new_node->WorkshopTechnology2);
@@ -83,8 +83,7 @@ int main() {
             }
             else {
                 cout << "PEEK Function Called : " << endl;
-                new_node = s1.peek();
-                cout << "TOP of Stack is: " << print_node(new_node) << endl << endl;
+                s1.peek();
             }
             break;
         case 5:
@@ -104,7 +103,7 @@ int main() {
             cout << "2. Applied Maths 1A" << endl;
             cout << "3. Applied Maths 1B" << endl;
             cout << "4. Computer Science" << endl;
-            cout << "5. DSA" << endl;
+            cout << "5. Data Structures & Algorithms" << endl;
             cout << "6. ECT" << endl;
             cout << "7. Physics 1A" << endl;
             cout << "8. Physics 1B" << endl;

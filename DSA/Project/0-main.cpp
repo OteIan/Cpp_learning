@@ -91,14 +91,16 @@ int main() {
     s1.push(new Node("FEE3/146715/2023", "Egan Mureithi", 21, "M", 85, 68, 86, 57, 90, 69, 83, 75, 68, 45, 75));
     s1.push(new Node("FEE3/147243/2023", "Alvin Muita", 20, "M", 96, 78, 46, 89, 90, 58, 45, 90, 84, 90, 98));
 
-    cout << s1.count() << endl;
+    // cout << s1.count() << endl;
     s1.display();
+    s1.peek();
+    s1.peek(43);
     // s1.displayByAttribute(0);
     // s1.displayByAttribute(1);
     // s1.displayByAttribute(2);
     // s1.displayByAttribute(3);
     // s1.displayByAttribute(4);
-    s1.displayByAttribute(5);
+    // s1.displayByAttribute(5);
     // s1.displayByAttribute(6);
     // s1.displayByAttribute(7);
     // s1.displayByAttribute(8);
