@@ -707,7 +707,6 @@ public:
     }
 
     bool checkIfNodeExist(Node *n) {
-        // Change to binary search
         Node *temp = top;
         bool exist = false;
 
