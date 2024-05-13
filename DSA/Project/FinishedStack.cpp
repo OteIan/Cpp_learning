@@ -656,6 +656,45 @@ private:
         popAttributesFromWT_2(n);
     }
 
+    string validateUnits(Node *n) {
+        if (n->AppliedMaths1A < 0 || n->AppliedMaths1A > 100) {
+            return "Applied Maths 1A";
+        }
+        else if (n->AppliedMaths1B < 0 || n->AppliedMaths1B > 100) {
+            return "Applied Maths 1B";
+        }
+        else if (n->ComputerScience < 0 || n->ComputerScience > 100) {
+            return "Computer Science";
+        }
+        else if (n->DSA < 0 || n->DSA > 100) {
+            return "Data Structures and Algorithms";
+        }
+        else if (n->ECT < 0 || n->ECT > 100) {
+            return "Electrical Circuit Theory";
+        }
+        else if (n->Physics1A < 0 || n->Physics1A > 100) {
+            return "Physics 1A";
+        }
+        else if (n->Physics1B < 0 || n->Physics1B > 100) {
+            return "Physics 1B";
+        }
+        else if (n->PureMaths1A < 0 || n->PureMaths1A > 100) {
+            return "Pure Maths 1A";
+        }
+        else if (n->PureMaths1B < 0 || n->PureMaths1B > 100) {
+            return "Pure Maths 1B";
+        }
+        else if (n->WorkshopTechnology1 < 0 || n->WorkshopTechnology1 > 100) {
+            return "Workshop Technology I";
+        }
+        else if (n->WorkshopTechnology2 < 0 || n->WorkshopTechnology2 > 100) {
+            return "Workshop Technology II";
+        }
+        else {
+            return "";
+        }
+    }
+
 public:
     Node *top;
 
@@ -684,9 +723,15 @@ public:
 
     void push(Node *n) {
         // Make changes here => aggregate and total grade calculated here
+        if (!checkIfNodeExist(n) && validateUnits(n) != "") {
+            cout << "\n--------------------\nPUSH function failed" << endl;
+            cout << "Invalid score for " << validateUnits(n) << ". Please enter a score between 0 and 100\n--------------------\n" << endl;
+            return;    
+        }
+
         if (top == NULL) {
             top = n;
-            cout << "Node PUSHED successfully\n" << endl;
+            cout << "--------------------\nNode PUSHED successfully\n--------------------" << endl;
             pushAllAttributes(n);
             nb_students++;
         }
@@ -697,7 +742,7 @@ public:
             n->next = top;
             top = n;
 
-            cout << "Node PUSHED successfully\n" << endl;
+            cout << "--------------------\nNode PUSHED successfully\n--------------------" << endl;
             pushAllAttributes(n);
             nb_students++;
         }
@@ -712,7 +757,7 @@ public:
                 top = n;
             }
 
-            cout << "Node PUSHED successfully\n" << endl;
+            cout << "--------------------\nNode PUSHED successfully\n--------------------" << endl;
             pushAllAttributes(n);
             nb_students++;
         }
@@ -721,7 +766,7 @@ public:
     Node *pop() {
         Node *temp = NULL;
         if (isEmpty()) {
-            cout << "stack underflow\n" << endl;
+            cout << "--------------------\nStack underflow\n--------------------" << endl;
             return temp;
         }
         else {
@@ -737,7 +782,7 @@ public:
     void peek(int pos = 0) {
         // Node *temp = NULL;
         if (isEmpty()) {
-            cout << "stack underflow\n" << endl;
+            cout << "--------------------\nStack underflow\n--------------------" << endl;
         }
         else if (pos == 0) {
             cout << "Top of the stack is:\n";
@@ -747,7 +792,7 @@ public:
         else {
             Node *temp = top;
             if (pos > nb_students) {
-                cout << "Invalid position\n" << endl;
+                cout << "--------------------\nInvalid position\n--------------------" << endl;
             }
             else {    
                 for (int i = 1; i <= pos; i++) {

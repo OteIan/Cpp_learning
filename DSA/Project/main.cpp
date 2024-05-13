@@ -5,6 +5,7 @@ int main() {
     Stack s1;
     int option, unit, sum = 0;
     float mean_grade = 0;
+    string first_name, last_name;
 
     do {
         cout << "What operation do you want to perform?" << "Select Option number. \nEnter 0 to exit." << endl;
@@ -17,7 +18,6 @@ int main() {
         cout << "7. Display by Student's attribute" << endl;
         cout << "8. Clear Screen" << endl << endl;
         cin >> option;
-        // Node n1 = new Node();
         Node *new_node = new Node();
 
         switch (option) {
@@ -26,8 +26,10 @@ int main() {
         case 1:
             cout << "Enter RegNo of student: ";
             cin >> new_node->RegNo;
-            cout << "Enter Name of student: ";
-            cin >> new_node->name;
+            cout << "Enter First and Last name of student: ";
+            cin >> first_name;
+            cin >> last_name;
+            new_node->name = first_name + " " + last_name;
             cout << "Enter age of student: ";
             cin >> new_node->age;
             cout << "Enter Gender of student: ";
@@ -73,13 +75,13 @@ int main() {
             break;
         case 3:
             if (s1.isEmpty())
-                cout << "Stack is Empty" << endl << endl;
+                cout << "--------------------\nStack is Empty\n--------------------" << endl << endl;
             else
-                cout << "Stack is not Empty" << endl << endl;
+                cout << "--------------------\nStack is not Empty\n--------------------" << endl << endl;
             break;
         case 4:
             if (s1.isEmpty()) {
-                cout << "Stack is Empty" << endl;
+                cout << "--------------------\nStack is Empty\n--------------------" << endl;
             }
             else {
                 cout << "PEEK Function Called : " << endl;
@@ -104,7 +106,7 @@ int main() {
             cout << "3. Applied Maths 1B" << endl;
             cout << "4. Computer Science" << endl;
             cout << "5. Data Structures & Algorithms" << endl;
-            cout << "6. ECT" << endl;
+            cout << "6. Electrical Circuit Theory" << endl;
             cout << "7. Physics 1A" << endl;
             cout << "8. Physics 1B" << endl;
             cout << "9. Pure Maths 1A" << endl;
@@ -116,18 +118,13 @@ int main() {
             s1.displayByAttribute(unit);
             cout << endl;
             break;
-        case 9:
+        case 8:
             system("clear");
             break;
         default:
             cout << "Enter Proper Option number " << endl << endl;
         }
     } while (option != 0);
-
-    while (!s1.isEmpty()) {
-        delete s1.pop();
-    }
-    cout << "Deleted Entire Stack" << endl;
 
     s1.destroy_stack();
 
